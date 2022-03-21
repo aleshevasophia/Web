@@ -23,5 +23,18 @@ header, main, footer {
 
         main {
         background: white;
+        overflow: auto;
         }
-        
+
+        main .main_block {
+            float: left;
+            width: 570px;
+        }
+        main img {
+            float: right;
+            width: 285px;
+        }
+        main .faq {
+            float: left;
+            width: 855px;
+        }
