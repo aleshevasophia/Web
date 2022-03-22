@@ -38,3 +38,15 @@ header, main, footer {
             float: left;
             width: 855px;
         }
+
+        footer {
+            overflow: auto;
+        }
+        footer .contact {
+            float: left;
+            width: 570px;  
+        }
+        footer .sitemap {
+            float: right;
+            width: 285px;
+        }
