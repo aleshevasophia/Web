@@ -59,7 +59,6 @@ header, main, footer {
             margin-top: 10px;
 	        margin-bottom: 10px;
         }
-        
         main h3 {
 	        margin-top: 10px;
 	        margin-bottom: 5px;	
@@ -74,6 +73,7 @@ header, main, footer {
             background: #ddd;
             padding: 5px;
             }
+            
         .tabs a span.active {
             background: #eee;
             }
