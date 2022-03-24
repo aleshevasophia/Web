@@ -32,26 +32,16 @@ var main = function (toDoObjects) {
                 toDos.forEach(function (todo) {
                     $content.append($("<li>").text(todo));
                 });
+
             } else if ($element.parent().is(":nth-child(3)")) {
+                console.log("Щелчок на вкладке Теги");
+            } else if ($element.parent().is(":nth-child(4)")) {
                 $input = $("<input>"),
                 $button = $("<button>").text("+");
-
-                $button.on("click", function () {
-                    if ($input.val() !== "") {
-                        toDos.push($input.val()+ "!");
-                        $input.val("");
-                    }
-                });
-
-                $input.on("keypress", function (event) {
-                    if (event.keyCode === 13) {
-                    if ($input.val() !== "") {
-                        toDos.push($input.val()+ "!");
-                        $input.val("");
-                $(".tabs a:first-child span").trigger("click");
-                }
-            }
-        });
+                $button.on = n("click", function () {
+                    toDos.push($input.val());
+                    $input.val("");
+                    });
             $content = $("<div>").append($input).append($button);
             }
             $("main .content").append($content);
