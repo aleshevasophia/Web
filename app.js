@@ -1,4 +1,8 @@
-var main = function () {
+var main = function (toDoObjects) {
+    var toDos = toDoObjects.map(function(toDo) {
+        return toDo.description;
+    });
+
     var toDos = ["Купить продукты",
                  "Обновить несколько новых задач",
                  "Подготовиться к лекции в понедельник",
@@ -57,5 +61,10 @@ var main = function () {
     $(".tabs a:first-child span").trigger("click");
 };
 $(document).ready(main);
-    
+$(document).ready(function () {
+    $.getJSON("todos.json", function (toDoObjects) {
+        main(toDoObjects);
+    });
+});
+
     
