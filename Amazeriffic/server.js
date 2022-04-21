@@ -13,8 +13,14 @@ http.createServer(app).listen(3000);
 app.get("/todos.json", function (req, res) {
 res.json(toDos);
 });
+// командуем Express принять поступающие
+// объекты JSON
+app.use(express.urlencoded({ extended: true }));
 app.post("/todos", function (req, res) {
-    console.log("Данные были отправлены на сервер!");
-    // простой объект отправлен обратно
-    res.json({"message":"Вы размещаетесь на сервере!"});
-});
+   // сейчас объект сохраняется в req.body
+	var newToDo = req.body;
+	console.log(newToDo);
+	toDos.push(newToDo);
+	// отправляем простой объект
+	res.json({"message":"Вы размещаетеся на сервере!"});
+}); 
