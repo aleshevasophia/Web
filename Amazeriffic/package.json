@@ -1,5 +1,9 @@
 {
+  "name": "amazeriffic",
+  "version": "1.0.0",
+  "main": "server.js",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "mongoose": "^6.3.2"
   }
 }
