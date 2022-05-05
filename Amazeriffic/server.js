@@ -13,15 +13,21 @@ var express = require("express"),
 	mongoose = require("mongoose"),
 	ToDosController = require("./controllers/todo_controller.js"),
 	UsersController = require("./controllers/user_controller.js"),
-	app = express();
+	app = express(); 
+
 http.createServer(app).listen(3000);
+
 app.use('/',express.static(__dirname + "/client"));
 app.use('/user/:username',express.static(__dirname + "/client"));
 
 // командуем Express принять поступающие объекты JSON
 app.use(express.urlencoded({ extended: true }));
+
 // подключаемся к хранилищу данных Amazeriffic в Mongo
-mongoose.connect('mongodb://127.0.0.1/amazeriffic', {
+mongoose.connect('mongodb://localhost/amazeriffic', {
+		useNewUrlParser: true,
+		//useCreateIndex: true,
+		useUnifiedTopology: true 
 }).then(res => {
 	console.log("DB Connected!")
 }).catch(err => {
@@ -43,4 +49,4 @@ app.get("/users.json", UsersController.index);
 app.post("/users", UsersController.create); 
 app.get("/users/:username", UsersController.show);
 app.put("/users/:username", UsersController.update);
-app.delete("/users/:username", UsersController.destroy);  
+app.delete("/users/:username", UsersController.destroy); 
