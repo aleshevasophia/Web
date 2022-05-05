@@ -96,3 +96,13 @@ header, main, footer {
             margin-top: 10px;
 	        margin-bottom: 10px;
         }
+
+        
+.linkEdit{
+	float: right;
+}
+
+.linkRemove{
+	float: right;
+	margin-left: 10px;
+}  
