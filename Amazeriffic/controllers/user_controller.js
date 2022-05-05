@@ -4,7 +4,7 @@ var User = require("../models/user.js"),
 	mongoose = require("mongoose");
 
 
-User.find({}, function (err, result) {
+/*User.find({}, function (err, result) {
 	if (err !== null) {
 		console.log("Что-то идет не так");
 		console.log(err);
@@ -19,7 +19,7 @@ User.find({}, function (err, result) {
 			}
 		});
 	}
-});
+});*/
 
 
 
